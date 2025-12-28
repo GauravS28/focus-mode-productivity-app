@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Focus Mode</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🎯 Focus Mode</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <div class="timer">
+      <h2 id="mode">Focus</h2>
+      <div id="time">25:00</div>
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <p>🔥 Streak: <span id="streak">0</span></p>
+      <p>😵 Distractions: <span id="distractions">0</span></p>
+      <button id="distractedBtn">I got distracted</button>
+    </div>
+
+    <div class="sounds">
+      <h3>🎧 Ambient Sounds</h3>
+      <button onclick="playSound('rain')">Rain</button>
+      <button onclick="playSound('cafe')">Cafe</button>
+      <button onclick="playSound('white')">White Noise</button>
+      <button onclick="stopSound()">Stop</button>
+    </div>
+
+    <div class="quote">
+      <p id="quoteText">Loading motivation...</p>
+    </div>
+  </div>
+
+  <audio id="rain" src="https://assets.mixkit.co/sfx/preview/mixkit-rain-loop-1255.mp3" loop></audio>
+  <audio id="cafe" src="https://assets.mixkit.co/sfx/preview/mixkit-restaurant-crowd-talking-ambience-444.mp3" loop></audio>
+  <audio id="white" src="https://assets.mixkit.co/sfx/preview/mixkit-air-conditioner-loop-1187.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
